@@ -41,7 +41,7 @@ jQuery(window).resize(function () {
 });
 
 
-function mostrarp(divNum){
+function mostrarp(divNum) {
 	document.getElementById("text1").classList.add("hide");
 	document.getElementById("text2").classList.add("hide");
 	document.getElementById("text3").classList.add("hide");
@@ -50,19 +50,19 @@ function mostrarp(divNum){
 	document.getElementById("text6").classList.add("hide");
 	document.getElementById("text7").classList.add("hide");
 
-  
+
 	// Show the specific div
 	document.getElementById("text" + divNum).classList.remove("hide");
 }
 
-function quitar(){
-	let negro= document.getElementById("negro");
+function quitar() {
+	let negro = document.getElementById("negro");
 
 	negro.classList.remove("negro");
 	negro.classList.add("negro-move");
 }
 
-function cerrar(){
+function cerrar() {
 	document.getElementById("text1").classList.add("hide");
 	document.getElementById("text2").classList.add("hide");
 	document.getElementById("text3").classList.add("hide");
@@ -70,4 +70,64 @@ function cerrar(){
 	document.getElementById("text5").classList.add("hide");
 	document.getElementById("text6").classList.add("hide");
 	document.getElementById("text7").classList.add("hide");
+}
+
+function bajar() {
+	var element = document.querySelector(".cuadro");
+	var element2 = document.querySelector("#arrow-up");
+	var element3 = document.querySelector("#flecha-1");
+	setTimeout(function () {
+		element3.setAttribute("onclick","subir()")
+		element2.classList.remove("fa-arrow-down");
+		element2.classList.add("fa-arrow-up");
+		element.style.transform = "translateY(-266px)";
+	}, 200);
+}
+
+function bajar2() {
+	var element = document.querySelector("#cuadro2");
+	//var element2 = document.querySelector("#arrow-up-2");
+	var element3 = document.querySelector("#flecha-2");
+	setTimeout(function () {
+		element3.setAttribute("onclick","bajar3()")
+		//element2.classList.remove("fa-arrow-down");
+		//element2.classList.add("fa-arrow-up");
+		element.style.transform = "translateY(-266px)";
+	}, 200);
+}
+
+function bajar3() {
+	var element = document.querySelector("#cuadro2");
+	var element2 = document.querySelector("#arrow-up-2");
+	var element3 = document.querySelector("#flecha-2");
+	setTimeout(function () {
+		element3.setAttribute("onclick","subir2()")
+		element2.classList.remove("fa-arrow-down");
+		element2.classList.add("fa-arrow-up");
+		element.style.transform = "translateY(-607px)";
+	}, 200);
+}
+
+function subir() {
+	var element = document.querySelector(".cuadro");
+	var element2 = document.querySelector("#arrow-up");
+	var element3 = document.querySelector("#flecha-1");
+	setTimeout(function () {
+		element3.setAttribute("onclick","bajar()")
+		element2.classList.remove("fa-arrow-up");
+		element2.classList.add("fa-arrow-down");
+		element.style.transform = "translateY(0px)";
+	}, 200);
+}
+
+function subir2() {
+	var element = document.querySelector("#cuadro2");
+	var element2 = document.querySelector("#arrow-up-2");
+	var element3 = document.querySelector("#flecha-2");
+	setTimeout(function () {
+		element3.setAttribute("onclick","bajar2()")
+		element2.classList.remove("fa-arrow-up");
+		element2.classList.add("fa-arrow-down");
+		element.style.transform = "translateY(0px)";
+	}, 200);
 }

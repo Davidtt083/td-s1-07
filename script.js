@@ -92,11 +92,23 @@ function bajar2() {
 		element3.setAttribute("onclick","bajar3()")
 		//element2.classList.remove("fa-arrow-down");
 		//element2.classList.add("fa-arrow-up");
-		element.style.transform = "translateY(-266px)";
+		element.style.transform = "translateY(-279px)";
 	}, 200);
 }
 
 function bajar3() {
+	var element = document.querySelector("#cuadro2");
+	//var element2 = document.querySelector("#arrow-up-2");
+	var element3 = document.querySelector("#flecha-2");
+	setTimeout(function () {
+		element3.setAttribute("onclick","bajar4()")
+		//element2.classList.remove("fa-arrow-down");
+		//element2.classList.add("fa-arrow-up");
+		element.style.transform = "translateY(-607px)";
+	}, 200);
+}
+
+function bajar4() {
 	var element = document.querySelector("#cuadro2");
 	var element2 = document.querySelector("#arrow-up-2");
 	var element3 = document.querySelector("#flecha-2");
@@ -104,7 +116,7 @@ function bajar3() {
 		element3.setAttribute("onclick","subir2()")
 		element2.classList.remove("fa-arrow-down");
 		element2.classList.add("fa-arrow-up");
-		element.style.transform = "translateY(-607px)";
+		element.style.transform = "translateY(-1008px)";
 	}, 200);
 }
 

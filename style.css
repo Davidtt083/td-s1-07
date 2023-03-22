@@ -82,7 +82,9 @@ a {
   transform: translateY(0px);
   will-change: transform;
 }
-
+#cuadro2{
+  margin-top: 25px;
+}
 .gris {
 
   width: 50%;
@@ -712,12 +714,12 @@ ul {
   margin-top: -421px;
   margin-left: 524px;
   width: 38%;
-  height: 49%;
+  height: 56%;
 }
 
 .wrapper3 {
   overflow: hidden;
-  height: 249px;
+  height: 286px;
   margin-top: -2px;
 }
 
